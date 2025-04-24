@@ -52,7 +52,34 @@ Key Files:
 - `order_products__train.csv` – Train order details used for recommendation modeling
 
 ---
+###  Dataset Path Configuration
 
+To ensure your notebooks work seamlessly across different machines and environments, the dataset loading paths have been configured using a relative folder structure.  
+
+####  Default Setup
+Place all Instacart CSV files inside a folder named `data/` in the **root directory** of this repository:
+
+```
+instacart-mba-project/
+│
+├── data/
+│   ├── orders.csv
+│   ├── products.csv
+│   ├── order_products__train.csv
+│   ├── order_products__prior.csv
+│   ├── aisles.csv
+│   └── departments.csv
+```
+
+The code in the notebooks automatically reads files from this folder using:
+
+```python
+base_path = "../data"
+orders = pd.read_csv(f"{base_path}/orders.csv")
+```
+
+#### 🛠 Optional: Use a Custom Dataset Path
+If you prefer to store the dataset elsewhere, set an environment variable named `DATA_PATH` before running the notebook:
 ##  Technologies Used
 
 - **Python** (pandas, scikit-learn, matplotlib, seaborn, mlxtend)
