@@ -38,7 +38,14 @@ The project is divided into the following main objectives, each represented by a
   - `order_products__train.csv`
 
 ---
+###  Dataset Source
 
+-  **Dataset Source**: The dataset used in this dissertation project is the **Instacart Online Grocery Shopping Dataset 2017**.
+-  **Access**: It is publicly available on Kaggle and can be accessed at: [https://www.kaggle.com/datasets/yasserh/instacart-online-grocery-basket-analysis-dataset]
+    (https://www.kaggle.com/datasets/yasserh/instacart-online-grocery-basket-analysis-dataset)
+-  **Provided By**: Originally compiled and released by **Instacart (US)**.
+-  **Purpose**: Designed for enabling data analysis exercises and benchmarking recommendation systems.
+-  **Usage**: Widely used in the **data science community**, especially for academic, research, and educational purposes.
 ##  Dataset Overview
 
 The dataset comes from Instacart's anonymized historical data, consisting of **3 million orders from 200,000 users** and over **50,000 unique products**.
@@ -77,6 +84,8 @@ The code in the notebooks automatically reads files from this folder using:
 base_path = "../data"
 orders = pd.read_csv(f"{base_path}/orders.csv")
 ```
+
+
 
 #### 🛠 Optional: Use a Custom Dataset Path
 If you prefer to store the dataset elsewhere, set an environment variable named `DATA_PATH` before running the notebook:
